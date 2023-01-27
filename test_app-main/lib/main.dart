@@ -84,7 +84,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           if ((data["x"] - element["x"]).abs() == 0 &&
               (element["y"]! - data["y"]).abs() == 0) {
           } else {
-            if ((data["x"] - element["x"]).abs() < 10) {
+            if ((data["x"] - element["x"]).abs() < 1) {
               c = c + 1;
 
               w = Positioned(
@@ -99,7 +99,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               print("I am here");
               data1 = true;
             }
-            if ((data["y"] - element["y"]).abs() < 10) {
+            if ((data["y"] - element["y"]).abs() < 1) {
               c = c + 1;
 
               w = Positioned(
@@ -114,7 +114,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               print("I am here");
               data1 = true;
             }
-            if ((data["x"] + 150 - element["x"]).abs() < 10) {
+            if ((data["x"] + 150 - element["x"]).abs() < 1) {
               c = c + 1;
 
               w = Positioned(
@@ -178,7 +178,7 @@ class MyPainter extends CustomPainter {
         canvas, new Offset((off1.dx + off2.dx) / 2, (off1.dy + off2.dy) / 2));
     final paint = Paint()
       ..color = Colors.black
-      ..strokeWidth = 4;
+      ..strokeWidth = 1;
     canvas.drawLine(p1, p2, paint);
   }
 
